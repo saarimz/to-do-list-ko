@@ -1,0 +1,27 @@
+body {
+    box-sizing: border-box;
+}
+
+.list-view {
+    border: 2px solid blue;
+}
+
+.input-view {
+    border: 2px solid green;
+}
+
+#list-input {
+    width: 100%;
+}
+
+.btn {
+    margin: 10px 0px;
+    
+    border-radius: 4px;
+    filter: invert(0%);
+}
+
+.btn:hover {
+    filter: invert(100%);
+}
+
