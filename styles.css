@@ -1,9 +1,15 @@
 body {
     box-sizing: border-box;
+    font-family: Avenir, Helvetica, sans-serif;
 }
 
 .list-view {
     border: 2px solid blue;
+}
+
+#header {
+    color: #001021;
+    font-size: 3em;
 }
 
 .input-view {
@@ -12,10 +18,11 @@ body {
 
 #list-input {
     width: 100%;
+    margin: 10px 0;
 }
 
 .btn {
-    margin: 10px 0px;
+    margin: 10px 5px;
     
     border-radius: 4px;
     filter: invert(0%);
@@ -25,3 +32,32 @@ body {
     filter: invert(100%);
 }
 
+hr {
+    border-bottom: 2px solid #00A9A5;
+}
+
+ul,li { 
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0; 
+    vertical-align: middle;
+}
+
+.main-list {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.list-item {
+    border: 2px solid #001021;
+    border-radius: 6px;
+    padding: 20px 10px;
+    margin: 0 auto 8px auto;
+    background: #11B5E4;
+    color: #F7F7F7;
+    font-size: 1.25em;
+    width: 90%;
+    
+
+}
