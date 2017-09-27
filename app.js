@@ -43,6 +43,8 @@ $(document).ready(function(){
         self.removeItem = function(item){
             self.listItems.remove(item);
         }
+
+        
     }
 
     //ko apply bindings
