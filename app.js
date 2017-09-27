@@ -1,6 +1,7 @@
 
-let listData = function(data){
+let listData = function(data,time){
     this.item = ko.observable(data);
+    this.timestamp = ko.observable(time);
 }
 
 let ViewModel = function() {
@@ -12,8 +13,28 @@ let ViewModel = function() {
 
     self.addToList = function(){
         let item = self.itemToAdd();
-        self.listItems.push(new listData(item));
+        let currentTime = (new Date(Date.now())).toLocaleDateString();
+        self.listItems.push(new listData(item,currentTime));
+        self.itemToAdd("");
+    }
+
+    self.clearList = function() {
+        self.listItems.removeAll();
+    }
+
+    self.hasItem = ko.computed(function(){
+        return (self.itemToAdd());
+    })
+
+    self.isNotEmpty = ko.computed(function(){
+        return (self.listItems().length);
+    })
+
+    self.removeItem = function(item){
+        self.listItems.remove(item);
     }
 }
 
 ko.applyBindings(new ViewModel());
+
+
