@@ -2,7 +2,16 @@ $(document).ready(function(){
     //model object
     let listData = function(data,time){
         this.item = ko.observable(data);
+        this.striked = ko.observable(false);
         this.timestamp = ko.observable(time);
+
+       this.strike = function(x) {
+           if (this.striked()) {
+               this.striked(false);
+           } else {
+               this.striked(true);
+           }
+       }
     }
     //VM
     let ViewModel = function() {

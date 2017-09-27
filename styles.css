@@ -98,3 +98,7 @@ ul,li {
 .fa-minus {
     color: #DB504A;
 }
+
+.struck {
+    text-decoration: line-through;
+}
