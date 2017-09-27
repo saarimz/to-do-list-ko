@@ -27,10 +27,8 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="list-view">
-                        <ul class="main-list">
-                            <li class="list-item">Apples</li>
-                            <li class="list-item">Pears</li>
-                            <li class="list-item">Peaches</li>
+                        <ul class="main-list" data-bind="foreach: listItems">
+                            <li class="list-item" data-bind="text: item"></li>
                         </ul>
                     </div>
                 </div>
@@ -39,12 +37,12 @@
                         <form>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <input type="text" id="list-input" placeholder="Eg. eggs">
+                                    <input type="text" id="list-input" placeholder="Eg. eggs" data-bind="textInput: itemToAdd">
                                 </div>
                             </div>
                             <div class="row text-left">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary" type="submit" id="add-button">Add to List</button>
+                                    <button class="btn btn-primary" type="submit" id="add-button" data-bind="click: addToList">Add to List</button>
                                     <button class="btn btn-warning" type="submit" id="clear-button">Clear</button>
                                 </div>
                             </div>
