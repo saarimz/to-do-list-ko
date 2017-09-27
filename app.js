@@ -1,9 +1,10 @@
 
+//model object
 let listData = function(data,time){
     this.item = ko.observable(data);
     this.timestamp = ko.observable(time);
 }
-
+//VM
 let ViewModel = function() {
     let self = this;
 
@@ -35,6 +36,7 @@ let ViewModel = function() {
     }
 }
 
+//ko apply bindings
 ko.applyBindings(new ViewModel());
 
 
