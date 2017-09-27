@@ -32,7 +32,7 @@
                                         <p class="list-comp" id="item-name" data-bind = "text: item"></p>
                                         <p class="list-comp" id="timestamp" data-bind = "text: timestamp"></p>
                                     </div>
-                                    <i class="fa fa-minus text-part" data-bind = "click: $root.removeItem"></i>
+                                    <i class="fa fa-minus text-part delete-button" data-bind = "click: $root.removeItem"></i>
                                 </div>
                             </li>
                         </ul>
@@ -49,7 +49,7 @@
                             <div class="row text-left">
                                 <div class="col-md-12">
                                     <button class="btn btn-primary" type="submit" id="add-button" data-bind="click: addToList, enable: hasItem">Add to List</button>
-                                    <button class="btn btn-warning" type="submit" id="clear-button" data-bind="click: clearList, enable: isNotEmpty">Clear</button>
+                                    <button class="btn btn-danger" type="submit" id="clear-button" data-bind="click: clearList, enable: isNotEmpty">Clear</button>
                                 </div>
                             </div>
                         </form>

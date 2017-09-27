@@ -31,7 +31,7 @@ body {
     filter: invert(0%);
 }
 
-.btn:hover {
+.btn-primary:hover {
     filter: invert(100%);
 }
 
@@ -61,10 +61,12 @@ ul,li {
     color: #F7F7F7;
     font-size: 1.5em;
     width: 90%;
-    box-shadow: 0 0 2px #000000;
-    
-
+    box-shadow: 0 0 2px #000000; 
+    opacity: 1;
+    /*transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);*/
+    transition: all 0.4s ease-out;
 }
+
 
 .list-text{
     display: flex;
